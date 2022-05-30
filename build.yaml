@@ -13,7 +13,7 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: bluemicro840_v1
     shield: cradio_left
   - board: bluemicro840_v1
     shield: cradio_right
