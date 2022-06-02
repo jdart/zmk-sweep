@@ -14,6 +14,11 @@
     quick-release;
 };
 
+&lt { 
+    flavor = "hold-preferred";
+};
+
+
 / {
         behaviors {
                 combos {
