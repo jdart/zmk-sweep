@@ -9,15 +9,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+&sk {
+    release-after-ms = <2500>;
+    quick-release;
+};
+
 / {
         behaviors {
-                skq: sticky_key_quick_release {
-                        compatible = "zmk,behavior-sticky-key";
-                        label = "STICKY_KEY_QUICK_RELEASE";
-                        #binding-cells = <1>;
-                        bindings = <&kp>;
-                        release-after-ms = <2000>;
-                };
                 combos {
                         compatible = "zmk,combos";
                         // symbols
@@ -154,7 +152,7 @@
                 modsl {
                         bindings = <
      &kp LS(Q)   &kp LS(W)    &kp LS(F)    &kp LS(P)  &kp LS(B)     &kp LS(J)    &kp LS(L)          &kp LS(U)        &kp LS(Y)      &kp LS(SEMI)
-     &skq LALT   &skq LGUI    &skq LSFT    &skq LCTL  &kp LS(G)     &kp LS(M)    &kp LS(N)          &kp LS(E)        &kp LS(I)      &kp LS(O)
+     &sk LALT    &sk LGUI     &sk LSFT     &sk LCTL   &kp LS(G)     &kp LS(M)    &kp LS(N)          &kp LS(E)        &kp LS(I)      &kp LS(O)
      &kp LS(Z)   &kp LS(X)    &kp LS(C)    &kp LS(D)  &kp LS(V)     &kp LS(K)    &kp LS(H)          &kp LS(COMMA)    &kp LS(DOT)    &kp LS(FSLH)
                                            &trans     &trans        &trans       &trans
                         >;
@@ -163,7 +161,7 @@
                 modsr {
                         bindings = <
     &kp LS(Q)     &kp LS(W)    &kp LS(F)     &kp LS(P)        &kp LS(B)      &kp LS(J)     &kp LS(L)    &kp LS(U)      &kp LS(Y)      &kp LS(SEMI)
-    &kp LS(A)     &kp LS(R)    &kp LS(S)     &kp LS(T)        &kp LS(G)      &kp LS(M)     &skq RCTL    &skq RSFT      &skq RGUI      &skq RALT
+    &kp LS(A)     &kp LS(R)    &kp LS(S)     &kp LS(T)        &kp LS(G)      &kp LS(M)     &sk RCTL     &sk RSFT       &sk RGUI       &sk RALT
     &kp LS(Z)     &kp LS(X)    &kp LS(C)     &kp LS(D)        &kp LS(V)      &kp LS(K)     &kp LS(H)    &kp LS(COMMA)  &kp LS(DOT)    &kp LS(FSLH)
                                              &trans           &trans         &trans        &trans
                         >;
