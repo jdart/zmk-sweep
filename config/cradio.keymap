@@ -21,36 +21,36 @@
                 combos {
                         compatible = "zmk,combos";
                         // symbols
-                        c_LBRC {
-                                timeout-ms = <50>;
-                                key-positions = <17 27>;
-                                bindings = <&kp LBRC>;
-                        };
-                        c_RBRC {
-                                timeout-ms = <50>;
-                                key-positions = <7 17>;
-                                bindings = <&kp RBRC>;
-                        };
-                        c_LPAR {
-                                timeout-ms = <50>;
-                                key-positions = <18 28>;
-                                bindings = <&kp LPAR>;
-                        };
-                        c_RPAR {
-                                timeout-ms = <50>;
-                                key-positions = <8 18>;
-                                bindings = <&kp RPAR>;
-                        };
-                        c_LBKT {
-                                timeout-ms = <50>;
-                                key-positions = <16 26>;
-                                bindings = <&kp LBKT>;
-                        };
-                        c_RBKT {
-                                timeout-ms = <50>;
-                                key-positions = <6 16>;
-                                bindings = <&kp RBKT>;
-                        };
+                        // c_LBRC {
+                        //         timeout-ms = <50>;
+                        //         key-positions = <17 27>;
+                        //         bindings = <&kp LBRC>;
+                        // };
+                        // c_RBRC {
+                        //         timeout-ms = <50>;
+                        //         key-positions = <7 17>;
+                        //         bindings = <&kp RBRC>;
+                        // };
+                        // c_LPAR {
+                        //         timeout-ms = <50>;
+                        //         key-positions = <18 28>;
+                        //         bindings = <&kp LPAR>;
+                        // };
+                        // c_RPAR {
+                        //         timeout-ms = <50>;
+                        //         key-positions = <8 18>;
+                        //         bindings = <&kp RPAR>;
+                        // };
+                        // c_LBKT {
+                        //         timeout-ms = <50>;
+                        //         key-positions = <16 26>;
+                        //         bindings = <&kp LBKT>;
+                        // };
+                        // c_RBKT {
+                        //         timeout-ms = <50>;
+                        //         key-positions = <6 16>;
+                        //         bindings = <&kp RBKT>;
+                        // };
                         // common shortcuts
                         c_AGL {
                                 timeout-ms = <50>;
@@ -103,11 +103,11 @@
                                 key-positions = <1 2 3>;
                                 bindings = <&reset>;
                         };
-                        c_CAPSLOCK {
-                                timeout-ms = <50>;
-                                key-positions = <12 17>;
-                                bindings = <&kp CAPSLOCK>;
-                        };
+                        // c_CAPSLOCK {
+                        //         timeout-ms = <50>;
+                        //         key-positions = <12 17>;
+                        //         bindings = <&kp CAPSLOCK>;
+                        // };
                         c_T {
                                 timeout-ms = <50>;
                                 key-positions = <2 3>;
