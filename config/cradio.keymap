@@ -19,7 +19,6 @@
     flavor = "hold-preferred";
 };
 
-
 / {
         behaviors {
                 as: auto_shift {
