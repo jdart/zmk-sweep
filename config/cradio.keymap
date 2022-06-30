@@ -147,9 +147,9 @@
                 compatible = "zmk,keymap";
                 default_layer {
                         bindings = <
-      AS(Q)     AS(W)    AS(F)     AS(P)        AS(B)         AS(J)      AS(L)          AS(U)        AS(Y)      &kp SEMI
-      AS(A)     AS(R)    AS(S)     AS(T)        AS(G)         AS(M)      AS(N)          AS(E)        AS(I)      &kp O
-      AS(Z)     AS(X)    AS(C)     AS(D)        AS(V)         AS(K)      AS(H)          &kp COMMA    &kp DOT    &kp FSLH
+      AS(Q)     AS(W)    AS(F)     AS(P)        AS(B)         AS(J)      AS(L)          AS(U)        AS(Y)      AS(SEMI)
+      AS(A)     AS(R)    AS(S)     AS(T)        AS(G)         AS(M)      AS(N)          AS(E)        AS(I)      AS(O)
+      AS(Z)     AS(X)    AS(C)     AS(D)        AS(V)         AS(K)      AS(H)          AS(COMMA)    AS(DOT)    AS(FSLH)
                                    &lt 3 BKSP   &lt 1 TAB     &lt 1 RET  &lt 2 SPACE
                         >;
                 };
