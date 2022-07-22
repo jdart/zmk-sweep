@@ -21,6 +21,13 @@
 
 / {
         behaviors {
+                tdq: tap_dance_0 {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "TAP_DANCE_0";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp SQT>, <&kp DQT>;
+                };
                 as: auto_shift {
                         compatible = "zmk,behavior-hold-tap";
                         label = "AUTO_SHIFT";
@@ -156,7 +163,7 @@
 
                 raise {
                         bindings = <
-    &kp DEL     &kp N7      &kp N8       &kp N9      &kp PRCNT          &kp TILDE  &kp EXCL    &kp SQT   &kp DQT     &kp AT
+    &kp DEL     &kp N7      &kp N8       &kp N9      &kp PRCNT          &kp TILDE  &kp EXCL    &tdq      &kp DQT     &kp AT
     &kp PLUS    &kp N4      &kp N5       &kp N6      &kp STAR           &kp LARW   &kp DARW    &kp UARW  &kp RARW    &kp EQUAL
     &kp N0      &kp N1      &kp N2       &kp N3      &kp HASH           &kp GRAVE  &kp AMPS    &kp PIPE  &kp UNDER   &kp BSLH
                                          &kp CARET   &kp DLLR           &kp GT     &kp MINUS
