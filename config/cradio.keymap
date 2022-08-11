@@ -122,9 +122,14 @@
                 key-positions = <1 2 3>;
                 bindings = <&reset>;
             };
+            c_CAPSWORD {
+                timeout-ms = <50>;
+                key-positions = <22 27>;
+                bindings = <&caps_word>;
+            };
             c_CAPSLOCK {
                 timeout-ms = <50>;
-                key-positions = <12 17>;
+                key-positions = <23 26>;
                 bindings = <&kp CAPSLOCK>;
             };
             c_T {
