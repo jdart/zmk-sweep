@@ -89,45 +89,35 @@
                 bindings = <&kp RBKT>;
             };
             c_LT {
-                timeout-ms = <50>;
+                timeout-ms = <100>;
                 key-positions = <19 29>;
                 bindings = <&kp LT>;
             };
             c_GT {
-                timeout-ms = <50>;
+                timeout-ms = <100>;
                 key-positions = <9 19>;
                 bindings = <&kp GT>;
             };
             // common shortcuts
             c_AGL {
-                timeout-ms = <50>;
+                timeout-ms = <70>;
                 key-positions = <1 11>;
                 bindings = <&kp LA(LG(LARW))>;
             };
             c_AGR {
-                timeout-ms = <50>;
+                timeout-ms = <70>;
                 key-positions = <2 12>;
                 bindings = <&kp LA(LG(RARW))>;
             };
             c_GBL {
-                timeout-ms = <50>;
+                timeout-ms = <70>;
                 key-positions = <11 21>;
                 bindings = <&kp LG(LBKT)>;
             };
             c_GBR {
-                timeout-ms = <50>;
+                timeout-ms = <70>;
                 key-positions = <12 22>;
                 bindings = <&kp LG(RBKT)>;
-            };
-            c_ASU {
-                timeout-ms = <50>;
-                key-positions = <3 13>;
-                bindings = <&kp LA(LS(DARW))>;
-            };
-            c_ASD {
-                timeout-ms = <50>;
-                key-positions = <13 23>;
-                bindings = <&kp LA(LS(UARW))>;
             };
             // misc
             c_esc {
