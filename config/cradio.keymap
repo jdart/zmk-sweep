@@ -22,6 +22,14 @@
 
 / {
     behaviors {
+        swap: swap {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            ignored-key-positions = <27>;
+            timeout-ms = <500>;
+        };
         tdq: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
@@ -178,19 +186,19 @@
 
         modsl {
             bindings = <
-    &kp LS(Q)   &kp LS(W)    &kp LS(F)    &kp LS(P)  &kp LS(B)     &kp LS(J)    &kp LS(L)          &kp LS(U)        &kp LS(Y)      &kp LS(SEMI)
-    &sk LALT    &sk LGUI     &sk LSFT     &sk LCTL   &kp LS(G)     &kp LS(M)    &kp LS(N)          &kp LS(E)        &kp LS(I)      &kp LS(O)
-    &kp LS(Z)   &kp LS(X)    &kp LS(C)    &kp LS(D)  &kp LS(V)     &kp LS(K)    &kp LS(H)          &kp LS(COMMA)    &kp LS(DOT)    &kp LS(FSLH)
-                                           &trans     &trans        &trans       &trans
+    &trans      &trans       &trans     &trans     &trans     &trans    &trans          &trans        &trans      &trans
+    &sk LALT    &sk LGUI     &sk LSFT   &sk LCTL   &trans     &trans    &trans          &trans        &trans      &trans
+    &trans      &kp LG(C)    &kp LG(V)  &trans     &trans     &trans    &trans          &trans        &trans      &trans
+                                        &trans     &trans     &trans    &trans
             >;
         };
 
         modsr {
             bindings = <
-    &kp LS(Q)     &kp LS(W)    &kp LS(F)     &kp LS(P)        &kp LS(B)      &kp LS(J)     &kp LS(L)    &kp LS(U)      &kp LS(Y)      &kp LS(SEMI)
-    &kp LS(A)     &kp LS(R)    &kp LS(S)     &kp LS(T)        &kp LS(G)      &kp LS(M)     &sk RCTL     &sk RSFT       &sk RGUI       &sk RALT
-    &kp LS(Z)     &kp LS(X)    &kp LS(C)     &kp LS(D)        &kp LS(V)      &kp LS(K)     &kp LS(H)    &kp LS(COMMA)  &kp LS(DOT)    &kp LS(FSLH)
-                                             &trans           &trans         &trans        &trans
+    &trans     &trans    &trans     &trans        &trans      &trans     &trans       &trans         &trans         &trans
+    &trans     &trans    &trans     &trans        &trans      &trans     &sk RCTL     &sk RSFT       &sk RGUI       &sk RALT
+    &trans     &trans    &trans     &trans        &trans      &trans     &swap        &kp LS(TAB)    &trans         &trans
+                                    &trans        &trans      &trans     &trans
             >;
         };
     };
