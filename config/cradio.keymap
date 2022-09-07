@@ -28,7 +28,6 @@
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
             ignored-key-positions = <27>;
-            timeout-ms = <500>;
         };
         tdq: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
