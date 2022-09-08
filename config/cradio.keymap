@@ -204,7 +204,7 @@
 
         modsr {
             bindings = <
-    &trans     &trans    &trans     &trans        &trans      &trans     &trans       &kp LG(E)      &kp LG(M)      &kp LS(LG(F))
+    &trans     &trans    &trans     &trans        &trans      &trans     &kp LS(F6)   &kp LG(E)      &kp LG(M)      &kp LS(LG(F))
     &trans     &trans    &trans     &trans        &trans      &trans     &sk RCTL     &sk RSFT       &sk RGUI       &sk RALT
     &trans     &trans    &trans     &trans        &trans      &trans     &swap        &kp LS(TAB)    &kp LG(GRAVE)  &kp LC(LS(R))
                                     &trans        &trans      &trans     &trans
