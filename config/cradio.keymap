@@ -138,7 +138,7 @@
             c_RST {
                 timeout-ms = <50>;
                 key-positions = <1 2 3>;
-                bindings = <&reset>;
+                bindings = <&bootloader>;
             };
             c_CAPSWORD {
                 timeout-ms = <50>;
