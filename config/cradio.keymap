@@ -197,7 +197,7 @@
             bindings = <
     &trans      &trans       &trans     &trans     &trans     &trans    &trans          &trans        &trans      &trans
     &sk LALT    &sk LGUI     &sk LSFT   &sk LCTL   &trans     &trans    &trans          &trans        &trans      &trans
-    &trans      &kp LG(C)    &kp LG(V)  &trans     &trans     &trans    &trans          &trans        &trans      &trans
+    &kp LG(Z)   &kp LG(C)    &kp LG(V)  &trans     &trans     &trans    &trans          &trans        &trans      &trans
                                         &trans     &trans     &trans    &trans
             >;
         };
