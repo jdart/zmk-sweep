@@ -17,11 +17,29 @@
 };
 
 &lt { 
-    flavor = "hold-preferred";
+    flavor = "balanced";
     quick-tap-ms = <250>;
 };
 
 / {
+    macros {
+        vim_indent: vim_indent {
+            compatible = "zmk,behavior-macro";
+            label = "ZM_vim_indent";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp GT &kp GT>;
+        };
+        vim_dedent: vim_dedent {
+            compatible = "zmk,behavior-macro";
+            label = "ZM_vim_dedent";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp LT &kp LT>;
+        };
+    };
     behaviors {
         swap: swap {
             compatible = "zmk,behavior-tri-state";
@@ -195,9 +213,9 @@
 
         modsl {
             bindings = <
-    &trans      &trans       &trans     &trans     &trans     &trans    &trans          &trans        &trans      &trans
+    &trans      &trans       &trans     &trans     &trans     &trans    &trans          &trans        &trans      &kp COLON
     &sk LALT    &sk LGUI     &sk LSFT   &sk LCTL   &trans     &trans    &trans          &trans        &trans      &trans
-    &kp LG(Z)   &kp LG(X)    &kp LG(C)  &kp LG(V)  &trans     &trans    &trans          &trans        &trans      &trans
+    &kp LG(Z)   &kp LG(X)    &kp LG(C)  &kp LG(V)  &trans     &trans    &vim_dedent     &vim_indent   &trans      &trans
                                         &trans     &trans     &trans    &trans
             >;
         };
