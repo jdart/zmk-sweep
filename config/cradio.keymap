@@ -53,7 +53,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp SQT>, <&kp DQT>, <&kp GRAVE>;
+            bindings = <&kp SQT>, <&kp GRAVE>;
         };
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -73,6 +73,10 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        // 0  1  2  3  4      5  6  7  8  9 
+        // 10 11 12 13 14     15 16 17 18 19
+        // 20 21 22 23 24     25 26 27 28 29
+        //          30 31     32 33
         combos {
             compatible = "zmk,combos";
             // symbols
@@ -136,6 +140,16 @@
                 timeout-ms = <70>;
                 key-positions = <12 22>;
                 bindings = <&kp LG(RBKT)>;
+            };
+            c_VIM_INDENT {
+                timeout-ms = <70>;
+                key-positions = <13 23>;
+                bindings = <&vim_indent>;
+            };
+            c_VIM_DEDENT {
+                timeout-ms = <70>;
+                key-positions = <13 3>;
+                bindings = <&vim_dedent>;
             };
             // misc
             c_esc {
@@ -204,7 +218,7 @@
 
         raise {
             bindings = <
-    &kp DEL     &kp N7      &kp N8       &kp N9      &kp PRCNT          &kp GRAVE  &kp EXCL    &tdq      &kp DQT     &kp AT
+    &kp DEL     &kp N7      &kp N8       &kp N9      &kp PRCNT          &kp AT     &kp EXCL    &tdq      &kp DQT     &kp COLON
     &kp PLUS    &kp N4      &kp N5       &kp N6      &kp STAR           &kp LARW   &kp DARW    &kp UARW  &kp RARW    &kp EQUAL
     &kp N0      &kp N1      &kp N2       &kp N3      &kp HASH           &kp TILDE  &kp AMPS    &kp PIPE  &kp UNDER   &kp BSLH
                                          &kp CARET   &kp DLLR           &kp GT     &kp MINUS
@@ -213,10 +227,10 @@
 
         modsl {
             bindings = <
-    &trans      &trans       &trans     &trans     &trans     &trans    &trans          &trans        &trans      &kp COLON
-    &sk LALT    &sk LGUI     &sk LSFT   &sk LCTL   &trans     &trans    &trans          &trans        &trans      &trans
-    &kp LG(Z)   &kp LG(X)    &kp LG(C)  &kp LG(V)  &trans     &trans    &vim_dedent     &vim_indent   &trans      &trans
-                                        &trans     &trans     &trans    &trans
+    &trans      &trans       &vim_dedent &vim_indent &trans     &trans    &trans          &trans        &trans      &trans
+    &sk LALT    &sk LGUI     &sk LSFT    &sk LCTL    &trans     &trans    &trans          &trans        &trans      &trans
+    &kp LG(Z)   &kp LG(X)    &kp LG(C)   &kp LG(V)   &trans     &trans    &trans          &key_repeat   &trans      &trans
+                                         &trans      &trans     &trans    &trans
             >;
         };
 
