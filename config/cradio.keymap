@@ -81,6 +81,11 @@
         combos {
             compatible = "zmk,combos";
             // symbols
+            c_DLLR {
+                timeout-ms = <50>;
+                key-positions = <31 32>;
+                bindings = <&kp DLLR>;
+            };
             c_LBRC {
                 timeout-ms = <50>;
                 key-positions = <17 27>;
