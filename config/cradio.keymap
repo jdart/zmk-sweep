@@ -49,6 +49,14 @@
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
             ignored-key-positions = <27>;
         };
+        ltf: layer_toggle_fast {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TOGGLE_FAST";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
         tdq: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
@@ -213,7 +221,7 @@
     AS(Q)     AS(W)    AS(F)     AS(P)        AS(B)         AS(J)      AS(L)          AS(U)        AS(Y)      AS(SEMI)
     AS(A)     ASS(R)   AS(S)     AS(T)        AS(G)         AS(M)      AS(N)          AS(E)        ASS(I)     AS(O)
     AS(Z)     AS(X)    AS(C)     AS(D)        AS(V)         AS(K)      AS(H)          AS(COMMA)    AS(DOT)    AS(FSLH)
-                                 &lt 3 BKSP   &lt 1 TAB     &lt 1 RET  &lt 2 SPACE
+                                 &ltf 3 BKSP   &lt 1 TAB     &lt 1 RET  &ltf 2 SPACE
             >;
         };
 
@@ -228,19 +236,19 @@
 
         modsl {
             bindings = <
-    &trans      &trans       &vim_dedent &vim_indent &trans     &trans    &trans          &trans        &trans      &trans
-    &sk LALT    &sk LGUI     &sk LSFT    &sk LCTL    &trans     &trans    &trans          &trans        &trans      &trans
-    &kp LG(Z)   &kp LG(X)    &kp LG(C)   &kp LG(V)   &trans     &trans    &trans          &key_repeat   &trans      &trans
-                                         &trans      &trans     &trans    &trans
+    &trans      &trans       &vim_dedent &vim_indent &trans         &trans    &trans    &trans        &trans      &trans
+    &sk LALT    &sk LGUI     &sk LSFT    &sk LCTL    &trans         &trans    &trans    &trans        &trans      &trans
+    &kp LG(Z)   &kp LG(X)    &kp LG(C)   &kp LG(V)   &trans         &trans    &trans    &key_repeat   &trans      &trans
+                                         &trans      &trans         &trans    &trans
             >;
         };
 
         modsr {
             bindings = <
-    &trans     &trans    &trans     &trans        &trans      &trans     &kp LS(F6)   &kp LG(E)      &kp LG(M)      &kp LS(LG(F))
-    &trans     &trans    &trans     &trans        &trans      &trans     &sk RCTL     &sk RSFT       &sk RGUI       &sk RALT
-    &trans     &trans    &trans     &trans        &trans      &trans     &swap        &kp LS(TAB)    &kp LG(GRAVE)  &kp LC(LS(R))
-                                    &trans        &trans      &trans     &trans
+    &trans     &trans    &trans     &trans     &trans      &trans     &kp LS(F6)   &kp LG(E)      &kp LG(M)      &kp LS(LG(F))
+    &trans     &trans    &trans     &trans     &trans      &trans     &sk RCTL     &sk RSFT       &sk RGUI       &sk RALT
+    &trans     &trans    &trans     &trans     &trans      &trans     &swap        &kp LS(TAB)    &kp LG(GRAVE)  &kp LC(LS(R))
+                                    &trans     &trans      &trans     &trans
             >;
         };
     };
