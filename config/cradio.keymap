@@ -53,9 +53,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TOGGLE_FAST";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <250>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
         tdq: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
