@@ -1,0 +1,11 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_DARTYL_DONGLE
+	def_bool $(shields_list_contains,dartyl_dongle)
+
+config SHIELD_DARTYL_LEFT
+    def_bool $(shields_list_contains,dartyl_left)
+
+config SHIELD_DARTYL_RIGHT
+    def_bool $(shields_list_contains,dartyl_right)

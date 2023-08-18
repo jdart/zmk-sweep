@@ -1,17 +1,17 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_CRADIO_DONGLE
+if SHIELD_DARTYL_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "Cradio"
+    default "Dartyl"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_CRADIO_DONGLE || SHIELD_CRADIO_LEFT || SHIELD_CRADIO_RIGHT
+if SHIELD_DARTYL_DONGLE || SHIELD_DARTYL_LEFT || SHIELD_DARTYL_RIGHT
 
 config ZMK_SPLIT
     default y
